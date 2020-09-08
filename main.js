@@ -1,6 +1,7 @@
 var lightbox = document.getElementById('lightbox')
 var imgList = document.querySelectorAll('#container img')
 var lightboxImage = document.getElementById('largeImg')
+var description = document.getElementById('description')
 //buttons
 var left = document.getElementById('btnLeft')
 var right = document.getElementById('btnRight')
@@ -9,6 +10,14 @@ var x = document.getElementById('btnX')
 var imgSourceList = []
 for(let i=0; i<imgList.length; i++){
     imgSourceList.push(imgList[i].src)
+}
+
+// list of li elements that contain descriptions
+var descList = document.querySelectorAll('#descList li')
+// list of innerHTML extracted from li elements above
+var descTxtList = []
+for(let i=0; i<descList.length; i++){
+    descTxtList.push(descList[i].innerHTML)
 }
 
 //image changing with buttons
@@ -26,6 +35,10 @@ for(let i=0; i<imgList.length; i++){
     imgList[i].addEventListener('click',function(e){
         lightbox.style.display = 'flex'
         lightboxImage.src = e.target.src
+
+        currentSource = lightboxImage.src
+        let descSource = imgSourceList.indexOf(currentSource)
+        description.innerHTML = descTxtList[descSource]
     })
 }
 
@@ -41,6 +54,7 @@ function changeImage(currSrc,dir){
         if(dir == false){
             newCell = currentCell-1
             lightboxImage.src = imgSourceList[newCell]
+            description.innerHTML = descTxtList[newCell]
             currentSource = imgSourceList[newCell]
         }
     }
@@ -48,6 +62,7 @@ function changeImage(currSrc,dir){
         if(dir == true){
             newCell = currentCell+1
             lightboxImage.src = imgSourceList[newCell]
+            description.innerHTML = descTxtList[newCell]
             currentSource = imgSourceList[newCell]
         }
     }
@@ -56,6 +71,7 @@ function changeImage(currSrc,dir){
         else newCell = currentCell-1
 
         lightboxImage.src = imgSourceList[newCell]
+        description.innerHTML = descTxtList[newCell]
         currentSource = imgSourceList[newCell]
     }
 }
@@ -63,12 +79,10 @@ function changeImage(currSrc,dir){
 addEventListener('click', function(event){
     if(event.target == right){
         direction = true
-        currentSource = lightboxImage.src
         changeImage(currentSource, direction)
     }
     else if(event.target == left){
         direction = false
-        currentSource = lightboxImage.src
         changeImage(currentSource, direction)
     }
 })

@@ -39,8 +39,8 @@ h1{
 }
 #buttonsContainer{
     position: absolute;
-    top: 1060px;
-    left: 1025px;
+    top: 34px;
+    left: 1074px;
 }
 .button{
     width: 70px;
@@ -53,4 +53,8 @@ h1{
 }
 #btnRight{
     margin-left: 20px;
+}
+
+#descList{
+    display: none;
 }
