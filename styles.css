@@ -11,10 +11,10 @@ body{
     margin-top: 100px;
 }
 h1{
-    color: red;
+    color: yellow;
     position: absolute;
     top: 10px;
-    left: 1050px;
+    left: 850px;
     font-size: 40px;
 }
 .img{
