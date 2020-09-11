@@ -36,6 +36,7 @@ h1{
 .largeImg{
     width: 1400px;
     height: 900px;
+    border: 2px solid black;
 }
 #buttonsContainer{
     position: absolute;
