@@ -28,6 +28,9 @@
 #tenSec::before{
     content: 'ten seconds: ';
 }
+#loopNotToggled{
+    margin-bottom: 10px;
+}
 /* #btnMore:hover{
     transform: rotate(180deg);
     transition: ease-in-out 0.5s;

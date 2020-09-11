@@ -2,6 +2,7 @@ var btnMore = document.getElementById('btnMore')
 var btnX = document.getElementById('btnX')
 var btnTickable = document.getElementById('btnTickable')
 var ticked = false;
+var loop = true;
 var time = 500;
 var lightboxImage = document.getElementById('largeImg')
 var imgList = document.querySelectorAll('#container img')
@@ -17,7 +18,7 @@ for(let i=0; i<descList.length; i++){
 }
 var currentSource = lightboxImage.src
 
-function startSlideshow(t, currSrc){
+function startSlideshow(t, currSrc, l){
     currentCell = imgSourceList.indexOf(currSrc)
     let lastCell = imgSourceList.length-1;
     let changePhoto = function(){
@@ -26,7 +27,9 @@ function startSlideshow(t, currSrc){
         currentCell++
         if(ticked==false) clearInterval(timer)
         else if(currentCell==lastCell){
-            currentCell = -1
+            //l = loop
+            if(l==true) currentCell = -1
+            else if(l==false) clearInterval(timer)
         }
     }
     let timer = setInterval(changePhoto,t)
@@ -36,7 +39,7 @@ btnTickable.addEventListener('click', function(){
     if(ticked == false){
         btnTickable.src = './assets/buttons/btnTicked.png';
         ticked = true;
-        startSlideshow(time, currentSource);
+        startSlideshow(time, currentSource, loop);
     }
     else if(ticked == true){
         btnTickable.src = './assets/buttons/btnNotTicked.png';
@@ -103,7 +106,16 @@ for(let i = 0; i< buttonSeconds.length; i++){
     }
     else if(i==4){
         buttonSeconds[i].addEventListener('click', function(){
-            console.log('i4 loop');
+            buttonSeconds[i].src = './assets/buttons/btnTicked.png'
+            buttonSeconds[5].src = './assets/buttons/btnNotTicked.png'
+            loop = true
+        })
+    }
+    else if(i==5){
+        buttonSeconds[i].addEventListener('click', function(){
+            buttonSeconds[i].src = './assets/buttons/btnTicked.png'
+            buttonSeconds[4].src = './assets/buttons/btnNotTicked.png'
+            loop = false
         })
     }
 }
