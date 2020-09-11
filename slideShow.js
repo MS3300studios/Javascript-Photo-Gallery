@@ -70,7 +70,7 @@ var buttonSeconds = document.getElementsByClassName('smallButtonSeconds')
 for(let i = 0; i< buttonSeconds.length; i++){
     if(i==0){
         buttonSeconds[i].addEventListener('click', function(){
-            time = 500;
+            time = 2000;
             buttonSeconds[i].src = './assets/buttons/btnTicked.png'
             buttonSeconds[1].src = './assets/buttons/btnNotTicked.png'
             buttonSeconds[2].src = './assets/buttons/btnNotTicked.png'
@@ -79,7 +79,7 @@ for(let i = 0; i< buttonSeconds.length; i++){
     }
     else if(i==1){
         buttonSeconds[i].addEventListener('click', function(){
-            time = 1000;
+            time = 5000;
             buttonSeconds[i].src = './assets/buttons/btnTicked.png'
             buttonSeconds[0].src = './assets/buttons/btnNotTicked.png'
             buttonSeconds[2].src = './assets/buttons/btnNotTicked.png'
@@ -88,7 +88,7 @@ for(let i = 0; i< buttonSeconds.length; i++){
     }
     else if(i==2){
         buttonSeconds[i].addEventListener('click', function(){
-            time = 2000;
+            time = 10000;
             buttonSeconds[i].src = './assets/buttons/btnTicked.png'
             buttonSeconds[0].src = './assets/buttons/btnNotTicked.png'
             buttonSeconds[1].src = './assets/buttons/btnNotTicked.png'
@@ -97,7 +97,7 @@ for(let i = 0; i< buttonSeconds.length; i++){
     }
     else if(i==3){
         buttonSeconds[i].addEventListener('click', function(){
-            time = 3000;
+            time = 30000;
             buttonSeconds[i].src = './assets/buttons/btnTicked.png'
             buttonSeconds[0].src = './assets/buttons/btnNotTicked.png'
             buttonSeconds[1].src = './assets/buttons/btnNotTicked.png'
@@ -119,3 +119,11 @@ for(let i = 0; i< buttonSeconds.length; i++){
         })
     }
 }
+
+
+
+addEventListener('keydown', function(event){
+    if(event.key === 'a'){
+        console.log(currentCell);
+    }
+})

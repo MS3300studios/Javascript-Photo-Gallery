@@ -25,7 +25,7 @@ var currentCell = null //the index of the photo currently on the screen
 var lastCell = imgList.length-1
 var firstCell = 0
 var direction = null //determines wether the user wants the next image (true) of previous image (false)
-var currentSource = null //the current src of the image, it is used to get the currentCell (index) of the image
+var currentSource = lightboxImage.src //the current src of the image, it is used to get the currentCell (index) of the image
 var newCell = null
 
 
@@ -91,6 +91,3 @@ addEventListener('click', function(event){
     }
 })
 
-// window.addEventListener('resize', function(e){
-//     console.log('window was resized');
-// })
