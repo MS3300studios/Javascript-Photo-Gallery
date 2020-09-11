@@ -12,6 +12,23 @@
     position: absolute;
     top: 135px;
     left: 200px;
-    background-color:rgb(47, 161, 32);
+    background-color: rgb(36,176,76);
     border: black solid 1px;
 }
+#btnMore{
+    margin-left: 5px;
+    border: none;
+}
+#twoSec::before{
+    content: 'two seconds: ';
+}
+#fiveSec::before{
+    content: "five seconds: ";
+}
+#tenSec::before{
+    content: 'ten seconds: ';
+}
+/* #btnMore:hover{
+    transform: rotate(180deg);
+    transition: ease-in-out 0.5s;
+} */

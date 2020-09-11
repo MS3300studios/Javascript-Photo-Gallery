@@ -25,7 +25,7 @@ h1{
 }
 #lightbox{
     position: absolute;
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
@@ -48,6 +48,12 @@ h1{
     height: 70px;
     border: black 3px solid;
     padding: 0;
+}
+.smallButton{
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    border: black 3px solid;
 }
 #btnLeft{
     margin-right: 20px;

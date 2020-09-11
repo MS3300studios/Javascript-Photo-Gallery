@@ -1,4 +1,4 @@
-.collapsible {
+  .collapsibleReal{
     background-color: rgb(6, 122, 15);
     color: white;
     cursor: pointer;
@@ -27,7 +27,7 @@
   }
 
   a{
-      text-decoration: none;
+    text-decoration: none;
   }
 
   #infoTab{

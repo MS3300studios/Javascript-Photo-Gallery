@@ -1,3 +1,4 @@
+var btnMore = document.getElementById('btnMore')
 var btnX = document.getElementById('btnX')
 var btnTickable = document.getElementById('btnTickable')
 var ticked = false;
@@ -16,7 +17,6 @@ for(let i=0; i<descList.length; i++){
 }
 var currentSource = lightboxImage.src
 
-
 function startSlideshow(t, currSrc){
     currentCell = imgSourceList.indexOf(currSrc)
     let lastCell = imgSourceList.length-1;
@@ -24,7 +24,6 @@ function startSlideshow(t, currSrc){
         lightboxImage.src = imgSourceList[currentCell+1]
         description.innerHTML = descTxtList[currentCell+1]
         currentCell++
-        console.log(currentCell);
         if(ticked==false) clearInterval(timer)
         else if(currentCell==lastCell){
             currentCell = -1
@@ -44,7 +43,15 @@ btnTickable.addEventListener('click', function(){
         ticked = false;    
     }
 })
-
+btnMore.addEventListener('click', function(event){
+    let src =  event.target.src
+    if(src === 'file:///D:/VS%20solutions/Javascript-Photo-Gallery/assets/buttons/moreDown.png'){
+        btnMore.src = './assets/buttons/moreUp.png'
+    }
+    else if(src === 'file:///D:/VS%20solutions/Javascript-Photo-Gallery/assets/buttons/moreUp.png'){
+        btnMore.src = './assets/buttons/moreDown.png'
+    }
+})
 btnX.addEventListener('click', function(){
     btnTickable.src = './assets/buttons/btnNotTicked.png'
     ticked = false;
@@ -55,3 +62,48 @@ addEventListener('keydown', function(event){
         ticked = false;
     }
 })
+
+var buttonSeconds = document.getElementsByClassName('smallButtonSeconds')
+for(let i = 0; i< buttonSeconds.length; i++){
+    if(i==0){
+        buttonSeconds[i].addEventListener('click', function(){
+            time = 500;
+            buttonSeconds[i].src = './assets/buttons/btnTicked.png'
+            buttonSeconds[1].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[2].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[3].src = './assets/buttons/btnNotTicked.png'
+        })
+    }
+    else if(i==1){
+        buttonSeconds[i].addEventListener('click', function(){
+            time = 1000;
+            buttonSeconds[i].src = './assets/buttons/btnTicked.png'
+            buttonSeconds[0].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[2].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[3].src = './assets/buttons/btnNotTicked.png'
+        })
+    }
+    else if(i==2){
+        buttonSeconds[i].addEventListener('click', function(){
+            time = 2000;
+            buttonSeconds[i].src = './assets/buttons/btnTicked.png'
+            buttonSeconds[0].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[1].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[3].src = './assets/buttons/btnNotTicked.png'
+        })
+    }
+    else if(i==3){
+        buttonSeconds[i].addEventListener('click', function(){
+            time = 3000;
+            buttonSeconds[i].src = './assets/buttons/btnTicked.png'
+            buttonSeconds[0].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[1].src = './assets/buttons/btnNotTicked.png'
+            buttonSeconds[2].src = './assets/buttons/btnNotTicked.png'
+        })
+    }
+    else if(i==4){
+        buttonSeconds[i].addEventListener('click', function(){
+            console.log('i4 loop');
+        })
+    }
+}
