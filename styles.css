@@ -25,7 +25,7 @@ h1{
 }
 #lightbox{
     position: absolute;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
     width: 100%;
