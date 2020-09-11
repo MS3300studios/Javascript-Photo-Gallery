@@ -6,7 +6,6 @@ var description = document.getElementById('description')
 var left = document.getElementById('btnLeft')
 var right = document.getElementById('btnRight')
 var x = document.getElementById('btnX')
-
 //an array of sources of the images 
 var imgSourceList = []
 for(let i=0; i<imgList.length; i++){
@@ -30,7 +29,6 @@ var currentSource = null //the current src of the image, it is used to get the c
 var newCell = null
 
 
-
 //open lightbox
 for(let i=0; i<imgList.length; i++){
     imgList[i].addEventListener('click',function(e){
@@ -43,9 +41,14 @@ for(let i=0; i<imgList.length; i++){
     })
 }
 
-//close the lightbox with X button
+//close the lightbox with X button and escape keyboard button
 x.addEventListener('click', function(){
     lightbox.style.display = 'none'
+})
+addEventListener('keydown', function(event){
+    if(event.key === 'Escape'){
+        lightbox.style.display = 'none'
+    }
 })
 
 function changeImage(currSrc,dir){
@@ -88,3 +91,6 @@ addEventListener('click', function(event){
     }
 })
 
+// window.addEventListener('resize', function(e){
+//     console.log('window was resized');
+// })
