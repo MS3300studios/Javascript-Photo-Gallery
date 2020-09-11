@@ -24,6 +24,7 @@ function startSlideshow(t, currSrc){
         lightboxImage.src = imgSourceList[currentCell+1]
         description.innerHTML = descTxtList[currentCell+1]
         currentCell++
+        console.log(currentCell);
         if(ticked==false) clearInterval(timer)
         else if(currentCell==lastCell){
             currentCell = -1

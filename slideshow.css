@@ -1,0 +1,17 @@
+#btnTickable{
+    margin-left: 100px;
+}
+#slideshowP{
+    color: white;
+    background-color: darkgreen;
+    padding: 10px;
+    font-size: 25px;
+    border-radius: 2px;
+}
+#slideshowContainer{
+    position: absolute;
+    top: 135px;
+    left: 200px;
+    background-color:rgb(47, 161, 32);
+    border: black solid 1px;
+}
