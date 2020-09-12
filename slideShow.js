@@ -18,8 +18,10 @@ for(let i=0; i<descList.length; i++){
 }
 var currentSource = lightboxImage.src
 
+
 function startSlideshow(t, currSrc, l){
-    currentCell = imgSourceList.indexOf(currSrc)
+    var currentCell = imgSourceList.indexOf(currSrc)
+    console.log(currentCell);
     let lastCell = imgSourceList.length-1;
     let changePhoto = function(){
         lightboxImage.src = imgSourceList[currentCell+1]
@@ -125,5 +127,6 @@ for(let i = 0; i< buttonSeconds.length; i++){
 addEventListener('keydown', function(event){
     if(event.key === 'a'){
         console.log(currentCell);
+        console.log(lightboxImage.src);
     }
 })
