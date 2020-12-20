@@ -5,23 +5,29 @@ html{
 body{
     display: flex;
     justify-content: center;
-    background-color: gray;
+    background-color: lightskyblue;
+    font-family: Arial, Helvetica, sans-serif;
 }
 #container{
     margin-top: 100px;
 }
 h1{
-    color: yellow;
+    color:  rgb(13 9 255);
     position: absolute;
     top: 10px;
-    left: 850px;
+    /* left: 850px; */
+    margin: 0 auto;
     font-size: 40px;
 }
 .img{
-    width: 500px;
-    height: 300px;
+    width: 435px;
+    height: 245px;
     margin: 0 20px 20px 20px;
     border: solid black 3px;
+    transition: 0.2s all ease-in;
+}
+.img:hover{
+    transform: scale(1.2);
 }
 #lightbox{
     position: absolute;
@@ -34,14 +40,13 @@ h1{
     background-color: rgba(0, 0, 0, 0.616);
 }
 .largeImg{
-    width: 1400px;
-    height: 900px;
+    width: 1200px;
+    height: 700px;
     border: 2px solid black;
 }
 #buttonsContainer{
     position: absolute;
     top: 34px;
-    left: 1074px;
 }
 .button{
     width: 70px;
@@ -64,4 +69,11 @@ h1{
 
 #descList{
     display: none;
+}
+.tiltButton:hover{
+    animation: rotateButton 0.5s;
+}
+@keyframes rotateButton{
+    33% {transform: rotate(10deg);}
+    66% {transform: rotate(-10deg);}
 }

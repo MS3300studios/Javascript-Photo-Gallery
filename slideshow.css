@@ -10,8 +10,8 @@
 }
 #slideshowContainer{
     position: absolute;
-    top: 135px;
-    left: 200px;
+    top: 118px;
+    left: 60px;
     background-color: rgb(36,176,76);
     border: black solid 1px;
 }

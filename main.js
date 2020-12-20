@@ -38,12 +38,16 @@ for(let i=0; i<imgList.length; i++){
         //get the index of the image and use it to get the correct description for it
         let descriptionCell = imgSourceList.indexOf(currentSource)
         description.innerHTML = descTxtList[descriptionCell]
+        //hide body scrollbar
+        document.body.style.overflow = 'hidden';
     })
 }
 
 //close the lightbox with X button and escape keyboard button
 x.addEventListener('click', function(){
     lightbox.style.display = 'none'
+    //enable the scrollbar again:
+    document.body.style.overflow = '';
 })
 addEventListener('keydown', function(event){
     if(event.key === 'Escape'){

@@ -10,6 +10,7 @@
     font-size: 15px;
     display: flex;
     justify-content: center;
+    transition: 0.2s all linear;
   }
   
   .active, .collapsible:hover {
@@ -22,18 +23,24 @@
     overflow: hidden;
     transition: max-height 0.2s ease-out;
     background-color: #f1f1f1;
-    width: 250px;
+    width: 255px;
     font-size: 20px;
+    overflow: auto;
   }
 
   a{
     text-decoration: none;
+    transition: 0.2s all ease-in;
+    color: #0433c0;
+  }
+  a:hover{
+    color: #20a3f5;
   }
 
   #infoTab{
     position: absolute;
-    top: 136px;
-    left: 1800px;
+    top: 119px;
+    right: 53px;
   }
 
   #infoTab ul li a{
