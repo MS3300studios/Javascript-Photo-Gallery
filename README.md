@@ -1,12 +1,9 @@
 ### Javascript-Photo-Gallery
 This is a photo gallery that has interactive photo browsing using Javascript DOM functions.
-
-**It is to be viewed on fullHD monitors (1920x1080)
-The page doesn't have @media configured yet, so the buttons 
-won't be aligned otherwise!**
 ---
 
-
+## Future updates:
+   * adding slideshow controls to the view on small devices
 
 
 - Functionalities:
