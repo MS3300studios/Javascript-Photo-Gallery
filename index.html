@@ -7,54 +7,67 @@
     <link rel="stylesheet" href="infoTab.css">
     <link rel="stylesheet" href="slideshow.css">
     <link rel="stylesheet" href="window.css">
-    <title>Gallery</title>
+    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="smallMediaOptionsContainer.css">
+    <link rel="stylesheet" href="buttonObscureDiv.css">
+    <link rel="stylesheet" href="mediaNoLightbox.css">
+    <title>Animal Gallery</title>
 </head>
 <body>
-    <h1><a href="https://github.com/MS3300studios">Welcome to Mikołaj Strusiński's gallery!</a></h1>
-    <div id="container">
-        <div>
-            <img class="img" src="assets/bear.jpg" title="bear">
-            <img class="img" src="assets/deer.jpg" title="deer">
-            <img class="img" src="assets/fox.jpg" title="fox">
-        </div>
-        <div>
-            <img class="img" src="assets/horse.jpg" title="horse">
-            <img class="img" src="assets/lion.jpg" title="lion">
-            <img class="img" src="assets/loris.jpg" title="loris">
-        </div>
-        <div>
-            <img class="img" src="assets/parrot.jpg" title="parrot">
-            <img class="img" src="assets/rabbit.jpg" title="rabbit">
-            <img class="img" src="assets/wolf.jpg" title="wolf">
-        </div>
+    <div id="container" class="img-area">
+        <h1><a href="https://github.com/MS3300studios">Welcome to the Animal Gallery!</a></h1>
+        <img class="img" alt="bear" src="assets/bear.jpg" title="bear">
+        <img class="img" alt="deer" src="assets/deer.jpg" title="deer">
+        <img class="img" alt="fox" src="assets/fox.jpg" title="fox">
+        
+        
+        <img class="img" alt="horse" src="assets/horse.jpg" title="horse">
+        <img class="img" alt="lion" src="assets/lion.jpg" title="lion">
+        <img class="img" alt="loris" src="assets/loris.jpg" title="loris">
+        
+        
+        <img class="img" alt="parrot" src="assets/parrot.jpg" title="parrot">
+        <img class="img" alt="rabbit" src="assets/rabbit.jpg" title="rabbit">
+        <img class="img" alt="wolf" src="assets/wolf.jpg" title="wolf">
     </div>
 
     <div id="lightbox">
+        <!-- seen only when width < 730px -->
+        <div id="smallMediaButtonsContainer">
+            <button id="smallMediaMore" class="tiltButton">options</button>
+            <button id="btnX2" class="tiltButton smallMediaButtonX">Close</button>
+        </div>
+        <!--  -->
+        <!-- <div class="smallMediaOptionsContainer">
+            under development
+        </div> -->
+        
         <div id="buttonsContainer">
-            <img id="btnLeft" class="button tiltButton" src="./assets/buttons/left.png" title="previous photo">
-            <img id="btnX" class="button tiltButton" src="./assets/buttons/x.png" title="close">
-            <img id="btnRight" class="button tiltButton" src="./assets/buttons/right.png" title="next photo">
+            <div id="unavailableBtnsObscureDiv"></div>
+            <img id="btnLeft" class="button tiltButton" alt="btnLeft" src="./assets/buttons/left.png" title="previous photo">
+            <img id="btnX" class="button tiltButton" alt="btnX" src="./assets/buttons/x.png" title="close">
+            <img id="btnRight" class="button tiltButton" alt="btnRight" src="./assets/buttons/right.png" title="next photo">
         </div>
         <div id="slideshowContainer">
             <p id="slideshowP">Tick to toggle slideshow:</p>
-            <img id="btnTickable" class="button" src="./assets/buttons/btnNotTicked.png" title="toggle to start slideshow">
+            <img id="btnTickable" class="button" alt="btnTickable" src="./assets/buttons/btnNotTicked.png" title="toggle to start slideshow">
             <br>
-            <img id="btnMore" class="smallButton collapsible" src="./assets/buttons/moreDown.png" title="more options">
-            <div class="content">
+            <img id="btnMore" class="smallButton collapsible" alt="btnMore" src="./assets/buttons/moreDown.png" title="more options">
+            <div class="content" id="slideshowOptions">
                 <h4>Time between each slide: </h4>
-                <p>two seconds (default): </p>
-                <img id="twoSec" class="smallButton smallButtonSeconds" src="./assets/buttons/btnTicked.png"><br>
+                <p>one second (default): </p>
+                <img id="twoSec" class="smallButton smallButtonSeconds" alt="twoSec" src="./assets/buttons/btnTicked.png"><br>
+                <p>two seconds: </p>
+                <img id="fiveSec" class="smallButton smallButtonSeconds" alt="fiveSec" src="./assets/buttons/btnNotTicked.png"><br>
                 <p>five seconds: </p>
-                <img id="fiveSec" class="smallButton smallButtonSeconds" src="./assets/buttons/btnNotTicked.png"><br>
+                <img id="tenSec" class="smallButton smallButtonSeconds" alt="tenSec" src="./assets/buttons/btnNotTicked.png"><br>
                 <p>ten seconds: </p>
-                <img id="tenSec" class="smallButton smallButtonSeconds" src="./assets/buttons/btnNotTicked.png"><br>
-                <p>thrity seconds: </p>
-                <img id="thirtySec" class="smallButton smallButtonSeconds" src="./assets/buttons/btnNotTicked.png"><br>
+                <img id="thirtySec" class="smallButton smallButtonSeconds" alt="thirtySec" src="./assets/buttons/btnNotTicked.png"><br>
                 <br><hr>
                 <p>loop through the photos (default): </p>
-                <img id="loopToggled" class="smallButton smallButtonSeconds" src="./assets/buttons/btnTicked.png">
+                <img id="loopToggled" class="smallButton smallButtonSeconds" alt="loopToggled" src="./assets/buttons/btnTicked.png">
                 <p>stop at the last photo: </p>
-                <img id="loopNotToggled" class="smallButton smallButtonSeconds" src="./assets/buttons/btnNotTicked.png">
+                <img id="loopNotToggled" class="smallButton smallButtonSeconds" alt="loopNotToggled" src="./assets/buttons/btnNotTicked.png">
             </div>
         </div>
         <div id="infoTab">
@@ -65,9 +78,8 @@
               </p>
             </div>
         </div>
-        <img id="largeImg" class="largeImg" src="assets/bear.jpg">
+        <img id="largeImg" class="largeImg" alt="largeImg" src="assets/bear.jpg">
     </div>
-
 <div id="descList">
     <ul>
         <li>
@@ -109,14 +121,9 @@
     </ul>
 </div>
 
-<!-- <div id="windowAlert">
-    <!-- <img id="closeAlertBtn" class="button" src="./assets/buttons/x.png" title="click to close"> -->
-    <!-- <img id="alertImg" src="./assets/alert.png" title="alert.png">
-</div>  -->
-
 <script src="./main.js"></script>
 <script src="./infoTab.js"></script>
 <script src="./slideShow.js"></script>
-<!-- <script src="./window.js"></script> -->
+<script src="./smallMediaMoreBtn.js"></script>
 </body>
 </html>

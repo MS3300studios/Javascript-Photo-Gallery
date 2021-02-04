@@ -55,10 +55,12 @@ addEventListener('keydown', function(event){
     }
 })
 
+
+
 function changeImage(currSrc,dir){
     currentCell = imgSourceList.indexOf(currSrc)
 
-    if(currentCell==lastCell){ //this is the last image, the 'next image' is disable
+    if(currentCell==lastCell){ //this is the last image, the 'next image' is disabled
         if(dir == false){
             newCell = currentCell-1
             lightboxImage.src = imgSourceList[newCell]   //set the correct image

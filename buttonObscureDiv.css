@@ -1,0 +1,7 @@
+#unavailableBtnsObscureDiv{
+    width: 300px;
+    height: 100px;
+    z-index: 200;
+    position: absolute;
+    display: none;
+}
